@@ -2,7 +2,8 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #00020D;
+  --background-gr: linear-gradient(96.34deg, #4B86FC 0%, #75F2F6 26.45%);
 }
 
 @theme inline {
@@ -12,11 +13,12 @@
   --font-mono: var(--font-geist-mono);
   --font-inter: var(--font-inter);
   --font-poppins: var(--font-poppins);
+  --bg-linear-gradient: var(--background-gr);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #00020D;
     --foreground: #ededed;
   }
 }
@@ -25,4 +27,31 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+@layer utilities {
+  .bg-gradient {
+    @apply bg-[url(https://res.cloudinary.com/durcctmhu/image/upload/v1763574390/a57b3849d7bbaf2595529a8aa0ea319df961c344_q2nkzi.jpg)] h-[1054px] w-full  bg-no-repeat bg-cover bg-center  ;
+  }
+}
+
+.bg-gradient::before{
+  background: #000000BF;
+  content: "";
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1054px;
+  z-index: 1;
+}
+
+.text-gradiant{
+  background-image: linear-gradient(96.34deg, #4B86FC 0%, #75F2F6 26.45%);
+  font-weight: 700;
+}
+.text-gradiants{
+  background-image: linear-gradient(95.16deg, #4B86FC -75.89%, #75F2F6 155.97%);
 }
