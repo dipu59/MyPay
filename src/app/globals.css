@@ -34,7 +34,13 @@ body {
   .bg-gradient {
     @apply bg-[url(https://res.cloudinary.com/durcctmhu/image/upload/v1763574390/a57b3849d7bbaf2595529a8aa0ea319df961c344_q2nkzi.jpg)] h-[1054px] w-full  bg-no-repeat bg-cover bg-center  ;
   }
+ .bg-gradient-card{
+@apply  h-[756px] w-full rounded-xl max-w-[560px] bg-no-repeat bg-cover bg-center
+  }
 }
+/* .bg-gradient-card{
+  background-image: url('https: //res.cloudinary.com/durcctmhu/image/upload/v1763741220/card2_zdxull.png');
+} */
 
 .bg-gradient::before{
   background: #000000BF;
@@ -54,4 +60,27 @@ body {
 }
 .text-gradiants{
   background-image: linear-gradient(95.16deg, #4B86FC -75.89%, #75F2F6 155.97%);
+}
+
+.standerdGradient{
+background: linear-gradient(96.86deg, #4B86FC -71.87%, #75F2F6 91.18%);
+} 
+.numberGradient{
+  background-image: linear-gradient(95.16deg, #4B86FC -75.89%, #75F2F6 155.97%);
+}
+.businessGrad{
+  background-image: linear-gradient(96.95deg, #FFFFFF -130.13%, #E5E5E5 116.23%);
+}
+.card2{
+  
+  -webkit-backdrop-filter: blur(19.5px);
+  backdrop-filter: blur(19.5px);
+  clip-path: url(#bgblur_0_0_25522_clip_path);
+  height: 100%;
+  width: 100%;
+      
+    
+}
+.card2Gradiant{
+  background-image: linear-gradient(96.95deg, #4B86FC -130.13%, #75F2F6 116.23%);
 }

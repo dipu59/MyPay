@@ -46,24 +46,33 @@ import PaymentSupport from "./paymentSupport";
             Investitiones , Mercator es titulorum Pecuniae mutuatae ad diem
             Mercatores cryptae valutarum...
           </motion.p>
-
-          <motion.div
-            className="flex justify-start items-center"
-            initial={{ y: 70, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.6, type: "spring" }}
-          >
-            <Link
-              href={"/"}
-              className="border-2 border-[#42A3FF] py-[15px] pl-[26px] pr-[15px] rounded-[40px]"
+          <motion.div>
+            <motion.div
+              className="flex justify-start items-center"
+              initial={{ y: 70, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.6, type: "spring" }}
             >
-              <div className="flex justify-center gap-3.5 items-center">
-                <p className="text-gradiants font-poppins font-medium text-[20px] text-transparent bg-clip-text">
-                  COMMENCER
-                </p>
-                <ArrowHero />
-              </div>
-            </Link>
+              <motion.div
+                whileHover={{ scale: 1.08,}}
+                whileTap={{ scale: 1 }}
+                transition={{ duration: 0.5,  type: "spring" }}
+                className="flex justify-start items-center"
+              >
+                {" "}
+                <Link
+                  href={"/"}
+                  className="border-2 border-[#42A3FF] py-[15px] pl-[26px] pr-[15px] rounded-[40px]"
+                >
+                  <div className="flex justify-center gap-3.5 items-center">
+                    <p className="text-gradiants font-poppins font-medium text-[20px] text-transparent bg-clip-text">
+                      COMMENCER
+                    </p>
+                    <ArrowHero />
+                  </div>
+                </Link>
+              </motion.div>
+            </motion.div>
           </motion.div>
         </motion.div>
 
@@ -92,7 +101,7 @@ import PaymentSupport from "./paymentSupport";
           </motion.div>
         </motion.div>
       </motion.div>
-     <PaymentSupport/>
+      <PaymentSupport />
     </div>
   );
 };

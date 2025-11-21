@@ -32,7 +32,7 @@ const PaymentSupport = () => {
         className="flex justify-between mt-[62px] flex-wrap md:gap-[200px] gap-17 items-center"
         initial="hidden"
         whileInView="show"
-        transition={{ staggerChildren: 0.15 }}
+        transition={{ staggerChildren: 0.2 }}
         viewport={{ once: false, amount: 0.9 }} // 🔥 Icons o 20% e animate
       >
         {Icon.map((item, index) => (
@@ -42,7 +42,9 @@ const PaymentSupport = () => {
               hidden: { opacity: 0, y: 40 },
               show: { opacity: 1, y: 0 },
             }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            transition={{ duration: 0.6,  ease: "easeOut" }}
+            whileHover={{animationDelay: 0.6, scale: 1.6, }}
+            className="hover:shadow-2xl  hover:shadow-blue-400  cursor-pointer"
           >
             {item}
           </motion.div>
