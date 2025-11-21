@@ -1,9 +1,7 @@
 "use client";
 import WooCard from "@/assets/svgs/wooCommerceGroup";
 import Link from "next/link";
-import React from "react";
 import { motion } from "framer-motion";
-import ArrowHero from "@/assets/icons/arrow-hero";
 import NewArr from "@/assets/icons/newarr";
 const VoriApi = () => {
   return (
@@ -34,7 +32,7 @@ const VoriApi = () => {
             {" "}
             <Link
               href={"#"}
-              className="border-2 border-[#42A3FF] py-[9px] pl-[26px] pr-[6px] rounded-[40px]"
+              className="border-2 border-[#42A3FF] py-[9px] pl-[26px] pr-1.5 rounded-[40px]"
             >
               <div className="flex justify-center gap-[50px] items-center">
                 <p className="text-gradiants font-poppins font-medium text-[20px] text-transparent bg-clip-text">

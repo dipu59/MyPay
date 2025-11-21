@@ -84,3 +84,7 @@ background: linear-gradient(96.86deg, #4B86FC -71.87%, #75F2F6 91.18%);
 .card2Gradiant{
   background-image: linear-gradient(96.95deg, #4B86FC -130.13%, #75F2F6 116.23%);
 }
+
+.reviewCardGradient{
+  background-image: linear-gradient(144.39deg, rgba(255, 255, 255, 0.4) -278.56%, rgba(109, 109, 109, 0.4) -78.47%, rgba(17, 16, 29, 0.4) 91.61%);
+}
