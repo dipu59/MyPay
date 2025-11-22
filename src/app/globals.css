@@ -13,6 +13,7 @@
   --font-mono: var(--font-geist-mono);
   --font-inter: var(--font-inter);
   --font-poppins: var(--font-poppins);
+  --font-DmSanse: var(--font-DmSanse);
   --bg-linear-gradient: var(--background-gr);
 }
 
@@ -37,6 +38,17 @@ body {
  .bg-gradient-card{
 @apply  h-[756px] w-full rounded-xl max-w-[560px] bg-no-repeat bg-cover bg-center
   }
+  .Infoform{
+    @apply max-w-[804px] items-center w-full mx-auto grid grid-cols-2  md:grid-cols-2 justify-center md:justify-between
+  }
+  .inputLabel{
+    @apply font-DmSanse font-bold text-base md:text-lg leading-[25px] tracking-[0.9px] uppercase block
+  }
+  .infoInput{
+    @apply  max-w-[364px] w-full rounded-[13px] py-[20.5px] px-[25px] mt-3
+  }
+
+
 }
 /* .bg-gradient-card{
   background-image: url('https: //res.cloudinary.com/durcctmhu/image/upload/v1763741220/card2_zdxull.png');
@@ -88,3 +100,7 @@ background: linear-gradient(96.86deg, #4B86FC -71.87%, #75F2F6 91.18%);
 .reviewCardGradient{
   background-image: linear-gradient(144.39deg, rgba(255, 255, 255, 0.4) -278.56%, rgba(109, 109, 109, 0.4) -78.47%, rgba(17, 16, 29, 0.4) 91.61%);
 }
+.inputGradient{
+  background-image: linear-gradient(144.39deg, rgba(255, 255, 255, 0.4) -278.56%, rgba(109, 109, 109, 0.4) -78.47%, rgba(17, 16, 29, 0.4) 91.61%);
+}
+

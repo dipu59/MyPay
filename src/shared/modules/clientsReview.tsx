@@ -20,7 +20,7 @@ const ClientsReview = () => {
     <GooglePayIcon />,
   ];
   return (
-    <div className="max-w-[1435px] w-full mx-auto px-10 md:px-9 overflow-hidden ">
+    <div className="max-w-[1435px] w-full mx-auto px-10 md:px-9  ">
       <motion.div
         className="z-10 md:mt-[190px]"
         initial={{ opacity: 0, y: 60 }}

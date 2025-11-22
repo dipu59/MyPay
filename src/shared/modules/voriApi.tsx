@@ -17,6 +17,7 @@ const VoriApi = () => {
           Nous disposons d’une api solide fait pour s’intégrer au mieux à votre
           environnement.
         </motion.p>
+        {/* Button */}
         <motion.div
           className="flex justify-start items-center mt-10 md:mt-[50px]"
           initial={{ y: 70, opacity: 0 }}

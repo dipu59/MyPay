@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter, Poppins } from "next/font/google";
+import { DM_Sans, Geist, Geist_Mono, Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/shared/widgests/header/header";
 
@@ -23,6 +23,11 @@ const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
+const DmSanse = DM_Sans({
+  variable: "--font-DmSanse",
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -37,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${inter.variable} ${poppins.variable} ${geistMono.variable} antialiased `}
+        className={`${geistSans.variable} ${inter.variable} ${DmSanse.variable} ${poppins.variable} ${geistMono.variable} antialiased `}
       >
         <Header />
         {children}
