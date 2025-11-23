@@ -18,22 +18,22 @@ const PaymentSupport = () => {
     <GooglePayIcon />,]
   return (
     <motion.div
-      className="z-10 md:mt-[190px]"
+      className="z-10 mt-52  md:mt-[190px] pb-10 lg:pb-0"
       initial={{ opacity: 0, y: 60 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      viewport={{ once: false, amount: 1 }} // 🔥 20% scroll e animate
+      viewport={{ once: true, amount: 0.3 }} // 🔥 20% scroll e animate
     >
-      <h1 className="text-[#DCDCDC] font-poppins font-semibold text-[30px] text-center">
+      <h1 className="text-[#DCDCDC] font-poppins font-semibold md:text-[30px] text-[24px] text-center">
         Nos supports de paiement
       </h1>
 
       <motion.div
-        className="flex justify-between mt-[62px] flex-wrap md:gap-[200px] gap-17 items-center"
+        className="flex md:justify-center justify-around mt-[62px] flex-wrap lg:gap-[180px]  gap-10 items-center"
         initial="hidden"
         whileInView="show"
         transition={{ staggerChildren: 0.2 }}
-        viewport={{ once: false, amount: 0.9 }} // 🔥 Icons o 20% e animate
+        viewport={{ once: true, amount: 0.9 }} // 🔥 Icons o 20% e animate
       >
         {Icon.map((item, index) => (
           <motion.div

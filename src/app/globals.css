@@ -33,7 +33,7 @@ body {
 
 @layer utilities {
   .bg-gradient {
-    @apply bg-[url(https://res.cloudinary.com/durcctmhu/image/upload/v1763574390/a57b3849d7bbaf2595529a8aa0ea319df961c344_q2nkzi.jpg)] h-[1054px] w-full  bg-no-repeat bg-cover bg-center  ;
+    @apply bg-[url(https://res.cloudinary.com/durcctmhu/image/upload/v1763574390/a57b3849d7bbaf2595529a8aa0ea319df961c344_q2nkzi.jpg)] h-auto w-full  bg-no-repeat bg-cover bg-center   ;
   }
  .bg-gradient-card{
 @apply  h-[756px] w-full rounded-xl max-w-[560px] bg-no-repeat bg-cover bg-center
@@ -54,7 +54,7 @@ body {
   background-image: url('https: //res.cloudinary.com/durcctmhu/image/upload/v1763741220/card2_zdxull.png');
 } */
 
-.bg-gradient::before{
+/* .bg-gradient::before{
   background: #000000BF;
   content: "";
   position: absolute;
@@ -64,7 +64,7 @@ body {
   bottom: 0;
   height: 1054px;
   z-index: 1;
-}
+} */
 
 .text-gradiant{
   background-image: linear-gradient(96.34deg, #4B86FC 0%, #75F2F6 26.45%);
