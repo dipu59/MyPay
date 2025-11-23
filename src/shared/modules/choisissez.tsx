@@ -37,7 +37,7 @@ const Choisissez = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true, amount: 0.3 }}
-        className="font-poppins font-medium text-[47px] text-white mt-4 text-center"
+        className="font-poppins font-medium text-base pt-7 lg:text-[47px] md:text-3xl text-white mt-4 text-center w-[350px] mx-auto md:w-fit"
       >
         Choisissez votre pack & Abonnez-vous
       </motion.h1>
@@ -46,18 +46,18 @@ const Choisissez = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.4 }}
         viewport={{ once: true, amount: 0.3 }}
-        className="font-poppins text-lg font-medium text-[#E1E1E1] mt-2 text-center"
+        className="font-poppins text-xs  md:text-base px-2  lg:text-lg font-medium text-[#E1E1E1] mt-4 lg:mt-2 md:text-center mx-auto w-[260px] md:w-fit"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit
       </motion.p>
 
-      <div className="flex px-5 mt-[30px] md:mt-[49px]   md:px-[46px] flex-col md:flex-row justify-center ">
+      <div className="flex px-2 md:px-5 md:px mt-[30px] md:mt-[49px]   lg:px-[46px] flex-col lg:flex-row justify-center ">
         {/* left */}
         <motion.div
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, type: "spring" }}
-          viewport={{ once: false, amount: 0.21 }}
+          viewport={{ once: true, amount: 0.21 }}
           className="rounded-[10px] max-w-[800px] w-full pt-[25px]  backdrop-blur-[100px] border-2 border-[#75F2F6]  bg-[#F1F1FF]/20 overflow-hidden  z-20"
         >
           <div className="flex flex-col justify-center items-center">
@@ -118,8 +118,8 @@ const Choisissez = () => {
             delay: 0.3,
             ease: "easeInOut",
           }}
-          viewport={{ once: false, amount: 0.24 }}
-          className="bg-[url(https://res.cloudinary.com/durcctmhu/image/upload/v1763741220/card2_zdxull.png)] max-w-[560px] w-full   md:-ml-4 md:-mt-3 mt-7 flex flex-col  pb-5 md:pb-[95px] overflow-hidden  pt-8 z-10 md:h-[756px] h-[650px] rounded-xl  "
+          viewport={{ once: true, amount: 0.24 }}
+          className="bg-[url(https://res.cloudinary.com/durcctmhu/image/upload/v1763741220/card2_zdxull.png)] mx-auto  max-w-[560px] w-full   lg:-ml-4 lg:-mt-3 mt-7 flex flex-col  pb-5 md:pb-[95px] overflow-hidden  pt-8 z-10 md:h-[756px] h-[650px] rounded-xl  "
         >
           <div className="flex justify-center items-center">
             <button className="standerdGradient text-lg font-semibold leading-[140%] text-black rounded-[40px] py-3.5 cursor-pointer px-[30px]">

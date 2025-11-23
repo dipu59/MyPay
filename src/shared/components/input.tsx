@@ -13,7 +13,7 @@ const Input = ({placeholder , type , label}: InputProps) => {
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeInOut" }}
-        viewport={{ once: false, amount: 0.31 }}
+        viewport={{ once: true, amount: 0.31 }}
         className=" inputLabel "
       >
         {label}
@@ -22,13 +22,13 @@ const Input = ({placeholder , type , label}: InputProps) => {
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
-        viewport={{ once: false, amount: 0.31 }}
+        viewport={{ once: true, amount: 0.31 }}
       >
         <motion.input
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          viewport={{ once: false, amount: 0.31 }}
+          viewport={{ once: true, amount: 0.31 }}
           className=" infoInput inputGradient"
           placeholder={placeholder}
           type={type}

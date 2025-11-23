@@ -13,8 +13,8 @@ const DemandInformationForm = () => {
       <motion.p
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9, ease:"easeInOut" }}
-        viewport={{ once: false, amount: 0.31 }}
+        transition={{ duration: 0.9, ease: "easeInOut" }}
+        viewport={{ once: true, amount: 0.31 }}
         className="font-poppins font-medium text-[30px] md:text-[47px] text-[#F7F7F7] text-center pb-[41px] md:pb-[60px] "
       >
         Demande d’information

@@ -22,26 +22,26 @@ const Footer = () => {
     { heading: "Partner", items: ["Our Partner", "Become a Partner"] },
   ];
   return (
-    <div className="mt-[50px] md:mt-[97px] px-7 md:px-0 ">
+    <div className="mt-[50px] md:mt-[97px] px-7 md:px-12 lg:px-0 ">
       <div className=" max-w-[1100px] flex flex-col md:flex-row flex-wrap justify-center md:justify-between items-start md:items-center w-full mx-auto px-4 md:px-0 ">
         <div className="flex  flex-col gap-[39px] md:gap-[51px]">
           <Logo />
-          <p className="font-poppins text-base text-[#FFFFFFB2] max-w-[312px] ">
+          <p className="font-poppins text-base text-[#FFFFFFB2] max-w-[312px]  ">
             A new way to make the payments easy, reliable and secure.
           </p>
         </div>
         {/* Second Section */}
-        <div className="flex flex-wrap  md:flex-row gap-9 mt-10 md:mt-0 md:gap-[145px]">
+        <div className="flex flex-wrap  md:flex-row gap-9 mt-10 lg:mt-0 md:gap-[145px]">
           {Links.map((item, index: number) => (
             <div key={index}>
-              <Link className="hover:text-blue-400 transition-all" href={"#"}>
+              <Link className="hover:text-blue-400 font-poppins transition-all" href={"#"}>
                 {item.heading}
               </Link>
               <div className=" space-y-2 mt-4">
                 {" "}
                 {item.items?.map((item, index) => (
                   <p
-                    className="text-gray-500 hover:text-gray-300 cursor-pointer transition-all "
+                    className="text-gray-500 hover:text-gray-300 cursor-pointer transition-all font-poppins "
                     key={index}
                   >
                     {item}

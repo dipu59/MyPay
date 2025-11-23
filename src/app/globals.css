@@ -39,7 +39,7 @@ body {
 @apply  h-[756px] w-full rounded-xl max-w-[560px] bg-no-repeat bg-cover bg-center
   }
   .Infoform{
-    @apply max-w-[804px] items-center w-full mx-auto grid grid-cols-2  md:grid-cols-2 justify-center md:justify-between
+    @apply max-w-[804px] items-center w-full mx-auto grid grid-cols-1 px-6 lg:px-0 md:gap-5 lg:gap-0  md:grid-cols-2 justify-center md:justify-between
   }
   .inputLabel{
     @apply font-DmSanse font-bold text-base md:text-lg leading-[25px] tracking-[0.9px] uppercase block
