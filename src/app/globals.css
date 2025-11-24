@@ -47,24 +47,7 @@ body {
   .infoInput{
     @apply  max-w-[364px] w-full rounded-[13px] py-[20.5px] px-[25px] mt-3
   }
-
-
 }
-/* .bg-gradient-card{
-  background-image: url('https: //res.cloudinary.com/durcctmhu/image/upload/v1763741220/card2_zdxull.png');
-} */
-
-/* .bg-gradient::before{
-  background: #000000BF;
-  content: "";
-  position: absolute;
-  top:0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 1054px;
-  z-index: 1;
-} */
 
 .text-gradiant{
   background-image: linear-gradient(96.34deg, #4B86FC 0%, #75F2F6 26.45%);
@@ -104,3 +87,11 @@ background: linear-gradient(96.86deg, #4B86FC -71.87%, #75F2F6 91.18%);
   background-image: linear-gradient(144.39deg, rgba(255, 255, 255, 0.4) -278.56%, rgba(109, 109, 109, 0.4) -78.47%, rgba(17, 16, 29, 0.4) 91.61%);
 }
 
+.formGradient{
+  background-image: linear-gradient(0deg, #F3F3F3, #F3F3F3),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.01));
+}
+
+.borderGradient{
+    background-image: linear-gradient(102.96deg, #42A3FF -17.91%, #75F2F6 68.15%);
+}
