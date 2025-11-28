@@ -43,7 +43,7 @@ const ClientsReview = () => {
           transition={{
             repeat: Infinity,
             ease: "linear",
-            duration: 20, // ✨ বেশি দিলে আরো smooth slow হবে
+            duration: 60, // ✨ বেশি দিলে আরো smooth slow হবে
           }}
         >
           {/* First row */}

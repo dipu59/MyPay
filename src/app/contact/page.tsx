@@ -19,7 +19,7 @@ const Page = () => {
             className="active:scale-95 hover:scale-110 rounded-sm transition-all "
           >
             <div>
-              <BackArrow />
+              <BackArrow className='md:w-10 w-8' />
             </div>
           </Link>
           <div>
@@ -31,7 +31,7 @@ const Page = () => {
         </div>
 
         {/* Contact Form Section */}
-        <div className="flex flex-col md:flex-row md:gap-[42px] p-2 max-w-[1130px] formGradient w-full mx-auto max-h-[530px] h-full mt-[39px]">
+        <div className="flex flex-col md:flex-row md:gap-[42px] p-2 max-w-[1130px] formGradient w-full mx-auto max-h-auto h-full mt-[39px] mb-32">
           {/* Information Section  */}
           <div className="bg-gradient relative before:content-[''] before:absolute before:inset-0 before:h-auto before:bg-[#00000099] border border-[#000000] before:z-1 max-w-[385px] w-full left-0 right-0  flex flex-col    ">
             <div className="lg:px-[34px] md:px-[22px] px-[18px] md:pt-[54px] md:pb-[114px] pb-[90px] pt-[37px] z-20 ">
@@ -70,9 +70,9 @@ const Page = () => {
           </div>
 
           {/* Form Section Start */}
-          <div className="z-40 mt-[76px] mb-[32px]">
-            <form className="space-y-10">
-              <div className="flex gap-[43px] items-center z-30">
+          <div className="z-40 md:mt-[76px] mt-[26px] mb-8">
+            <form className="space-y-10 px-3 md:px-0">
+              <div className="flex md:gap-[43px] gap-10 flex-col md:flex-row md:items-center z-30">
                 <div>
                   <label className="text-[#B0B0B0] font-poppins font-medium text-[12px]">
                     Votre nom
@@ -98,6 +98,7 @@ const Page = () => {
                   </div>
                 </div>
               </div>
+
               <div>
                 <label className="text-[#B0B0B0] font-poppins font-medium text-[12px]">
                   Votre Email
@@ -121,7 +122,7 @@ const Page = () => {
               </div>
               {/* Gradient Button */}
               <button className="z-30 w-fit borderGradient p-0.5 cursor-pointer hover:scale-105 active:scale-100 transition-all ">
-                <div className="flex justify-center items-center py-[18px] px-8 gap-5 bg-[#f2f4f0]">
+                <div className="flex justify-center items-center md:py-[18px] py-[9px] md:px-8 px-4 gap-5 bg-[#f2f4f0]">
                   <p className="text-[#4B86FC]">ENVOYER</p>
                   <ArrowHero />
                 </div>
