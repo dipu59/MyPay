@@ -4,7 +4,6 @@ import BackArrow from "@/assets/icons/back-arrow";
 import LocationIcon from "@/assets/icons/location-Icon";
 import MessageIcon from "@/assets/icons/message-icon";
 import PhoneIcon from "@/assets/icons/phone-Icon";
-import { register } from "module";
 import Link from "next/link";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { FaRegQuestionCircle } from "react-icons/fa";
