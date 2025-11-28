@@ -1,14 +1,31 @@
+"use client";
 import ArrowHero from "@/assets/icons/arrow-hero";
 import BackArrow from "@/assets/icons/back-arrow";
 import LocationIcon from "@/assets/icons/location-Icon";
 import MessageIcon from "@/assets/icons/message-icon";
 import PhoneIcon from "@/assets/icons/phone-Icon";
+import { register } from "module";
 import Link from "next/link";
-import React from "react";
-import { FaPhone, FaPhoneSlash } from "react-icons/fa";
-import { FaPhoneFlip } from "react-icons/fa6";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { FaRegQuestionCircle } from "react-icons/fa";
+
+type FormData = {
+  FirstName: string;
+  LastName: String;
+  Email: String;
+  message: String;
+};
 
 const Page = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormData>();
+
+  const onSubmit: SubmitHandler<FormData> = (data) => {
+    console.log(data);
+  };
   return (
     <div className="bg-gradient relative before:content-[''] before:absolute before:inset-0 before:h-[1984px] before:bg-[#000000BF] before:z-1   mx-auto w-full left-0 right-0 px-8 flex flex-col    lg:pt-0 overflow-hidden lg:pb-6 ">
       <div className="flex  flex-col justify-center items-center mt-40 z-30">
@@ -19,7 +36,7 @@ const Page = () => {
             className="active:scale-95 hover:scale-110 rounded-sm transition-all "
           >
             <div>
-              <BackArrow className='md:w-10 w-8' />
+              <BackArrow className="md:w-10 w-8" />
             </div>
           </Link>
           <div>
@@ -71,7 +88,10 @@ const Page = () => {
 
           {/* Form Section Start */}
           <div className="z-40 md:mt-[76px] mt-[26px] mb-8">
-            <form className="space-y-10 px-3 md:px-0">
+            <form
+              className="space-y-10 px-3 md:px-0"
+              onSubmit={handleSubmit(onSubmit)}
+            >
               <div className="flex md:gap-[43px] gap-10 flex-col md:flex-row md:items-center z-30">
                 <div>
                   <label className="text-[#B0B0B0] font-poppins font-medium text-[12px]">
@@ -79,10 +99,18 @@ const Page = () => {
                   </label>
                   <div>
                     <input
+                      {...register("FirstName", {
+                        required: "First Name is required",
+                      })}
                       className="font-poppins font-medium text-base md:text-xl text-[#333333] border-b border-b-[#B0B0B0] w-full outline-none focus:outline-none  placeholder:text-[#333333]"
                       placeholder="John"
                       type="text"
                     />
+                    {errors.FirstName && (
+                      <p className=" text-red-500 pt-1 text-xs flex gap-1  items-center ">
+                        {errors.FirstName.message} <FaRegQuestionCircle />
+                      </p>
+                    )}
                   </div>
                 </div>
                 <div>
@@ -91,10 +119,18 @@ const Page = () => {
                   </label>
                   <div>
                     <input
+                      {...register("LastName", {
+                        required: "Last Name is required",
+                      })}
                       className="font-poppins font-medium text-base md:text-xl text-[#333333] border-b border-b-[#B0B0B0] w-full outline-none focus:outline-none  placeholder:text-[#333333]"
                       placeholder="Doe"
                       type="text"
                     />
+                    {errors.LastName && (
+                      <p className=" text-red-500 pt-1 text-xs flex gap-1  items-center ">
+                        {errors.LastName.message} <FaRegQuestionCircle />
+                      </p>
+                    )}
                   </div>
                 </div>
               </div>
@@ -105,10 +141,22 @@ const Page = () => {
                 </label>
                 <div>
                   <input
+                    {...register("Email", {
+                      required: "Email is required",
+                      pattern: {
+                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                        message: "Email Invalid",
+                      },
+                    })}
                     className="font-poppins font-medium text-base md:text-xl text-[#333333] border-b border-b-[#B0B0B0] w-full outline-none focus:outline-none  placeholder:text-[#333333]"
                     placeholder="John@doe.com"
                     type="email"
                   />
+                  {errors.Email && (
+                    <p className=" text-red-500 pt-1 text-xs flex gap-1  items-center ">
+                      {errors.Email.message} <FaRegQuestionCircle />
+                    </p>
+                  )}
                 </div>
               </div>
               <div>
@@ -118,7 +166,15 @@ const Page = () => {
                 <textarea
                   className="font-poppins font-medium text-base md:text-[17px] text-[#333333] border-b border-b-[#B0B0B0] w-full  outline-none focus:outline-none  placeholder:text-[#333333] mt-1 h-20 "
                   placeholder="Ecrivez votre message"
-                ></textarea>
+                  {...register("message", {
+                    required: "message is required",
+                  })}
+                ></textarea>{" "}
+                {errors.message && (
+                  <p className=" text-red-500 pt-1 text-xs flex gap-1  items-center ">
+                    {errors.message.message} <FaRegQuestionCircle />
+                  </p>
+                )}
               </div>
               {/* Gradient Button */}
               <button className="z-30 w-fit borderGradient p-0.5 cursor-pointer hover:scale-105 active:scale-100 transition-all ">
