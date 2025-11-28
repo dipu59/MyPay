@@ -18,6 +18,11 @@ const ClientsReview = () => {
     <PaypalIcon />,
     <PayIcon />,
     <GooglePayIcon />,
+    <VisaIcon />,
+    <MasterCardIcon />,
+    <PaypalIcon />,
+    <PayIcon />,
+    <GooglePayIcon />,
   ];
   return (
     <div className="max-w-[1435px] w-full mt-16 mx-auto px-3 md:px-9  ">
@@ -33,33 +38,41 @@ const ClientsReview = () => {
         </h1>
 
         <motion.div
-          className="flex justify-center mt-[62px] flex-wrap lg:gap-[200px] gap-17 items-center"
-          initial="hidden"
-          whileInView="show"
-          transition={{ staggerChildren: 0.2 }}
-          viewport={{ once: true, amount: 0.9 }} // 🔥 Icons o 20% e animate
+          className="flex w-max py-12"
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{
+            repeat: Infinity,
+            ease: "linear",
+            duration: 20, // ✨ বেশি দিলে আরো smooth slow হবে
+          }}
         >
-          {Icon.map((item, index) => (
-            <motion.div
-              key={index}
-              variants={{
-                hidden: { opacity: 0, y: 40 },
-                show: { opacity: 1, y: 0 },
-              }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              whileHover={{ animationDelay: 0.6, scale: 1.6 }}
-              className="hover:shadow-2xl  hover:shadow-blue-400  cursor-pointer"
-            >
-              {item}
-            </motion.div>
-          ))}
+          {/* First row */}
+          <div className="flex gap-20 items-center">
+            {Icon.map((icon, index) => (
+              <div key={index} className="min-w-40 flex justify-center">
+                {icon}
+              </div>
+            ))}
+          </div>
+
+          {/* Duplicate row for seamless loop */}
+          <div className="flex gap-20 items-center">
+            {Icon.map((icon, index) => (
+              <div
+                key={`dup-${index}`}
+                className="min-w-40 flex justify-center"
+              >
+                {icon}
+              </div>
+            ))}
+          </div>
         </motion.div>
         {/* review section */}
         <motion.div
           initial={{ y: 40, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.9, ease: "easeInOut" }}
-          className=" flex mx-auto flex-col mt-[60-px] md:mt-[103px] reviewCardGradient max-w-[1112px] w-full rounded-[20px] py-[27px]"
+          className=" flex mx-auto flex-col mt-[60-px] reviewCardGradient max-w-[1112px] w-full rounded-[20px] py-[27px]"
         >
           <div className="  flex justify-center items-center">
             <Logo className="md:size-14  size-10" />
